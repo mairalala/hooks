@@ -3,8 +3,14 @@ import React, { useState } from 'react'
 const Second = () => {
 
     const [name, setName]= useState("Laura vanessa ramirez");
+    const [isNameChanged, setIsNameChanged]= useState(false);
     const changeName= (e)=>{
-        setName("Maira alexandra ramirez");
+        if (isNameChanged) {
+            setName("Laura vanessa ramirez");
+        }else{
+            setName("Maira Alexandra ramirez");
+        }
+        setIsNameChanged(!isNameChanged);
     }
 
   return (
