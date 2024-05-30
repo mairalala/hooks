@@ -7,8 +7,8 @@ const First = () => {
   return (
     <div>
         <h3>El número del contador es: {counter} </h3>
-        <button type="submit" onClick={() =>setCounter(counter +1)}>
-            sumarcontador
+        <button type="submit" class="btn btn-success" onClick={() =>setCounter(counter +1)}>
+            sumar contador
         </button>
     </div>
   )
