@@ -1,27 +1,31 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 const Second = () => {
+  const [name, setName] = useState("Laura Vanessa Ramirez");
+  const [isNameChanged, setIsNameChanged] = useState(false);
 
-    const [name, setName]= useState("Laura vanessa ramirez");
-    const [isNameChanged, setIsNameChanged]= useState(false);
-    const changeName= (e)=>{
-        if (isNameChanged) {
-            setName("Laura vanessa ramirez");
-        }else{
-            setName("Maira Alexandra ramirez");
-        }
-        setIsNameChanged(!isNameChanged);
+  const changeName = () => {
+    if (isNameChanged) {
+      setName("Laura Vanessa Ramirez");
+    } else {
+      setName("Maira Alexandra Ramirez");
     }
+    setIsNameChanged(!isNameChanged);
+  }
 
   return (
-    <div>
-        <h3>Component:  SecondComponent</h3>
-        <p>{name}</p>
-        <button class='btn btn-success' onClick={changeName}>
-            cambiar nombre
-        </button>
+    <div className="card p-3 my-3">
+      <h3>Component: SecondComponent</h3>
+      <p>{name}</p>
+      <button 
+        type="button" 
+        className="btn btn-primary mt-2" 
+        onClick={changeName}
+      >
+        Cambiar nombre
+      </button>
     </div>
-  )
+  );
 }
 
-export default Second
+export default Second;
